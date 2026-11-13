@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Menos telas, mais criatividade: combo com 4 livros digitais para colorir (Noé, Ester, Daniel e Carros) em PDF, prontos para imprimir.">
+<title>Combo Criativo para Colorir — Noé, Ester, Daniel e Carros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2c43;--muted:#66707a;--navy:#08294a;--navy2:#2b2c63;--cream:#fdf9f1;--beige:#f6eee0;--lav:#f1ebfc;--mint:#e2f5e9;--purple:#6a4fa3;--gold:#ffc62e;--gold2:#d9a310;--green:#12875c;--red:#e23a32;--line:#e9e3ee;--shadow:0 16px 40px #0f2c4318;--display:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+svg{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+section{padding:84px 0}
+.eyebrow{display:block;text-transform:uppercase;letter-spacing:.16em;color:var(--purple);font-size:12px;font-weight:800}
+.heading{font:800 clamp(32px,4vw,46px)/1.1 var(--display);letter-spacing:-.025em;margin:10px 0 16px}
+.center{text-align:center;max-width:700px;margin:0 auto 40px}
+.center p{color:var(--muted);margin:0}
+
+/* image fallback */
+.ph{position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.noimg{display:grid;place-items:center;background:linear-gradient(145deg,#ffe9b0,#f3c1d0)}
+.ph.noimg img{display:none}
+.ph.noimg:after{content:attr(data-emoji);font-size:64px}
+
+/* top bar */
+.offer{position:sticky;top:0;z-index:20;background:var(--red);color:#fff;text-align:center;padding:11px 12px;font-size:13px;font-weight:800;letter-spacing:.03em;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
+.offer b{font:700 13px ui-monospace,Menlo,Consolas,monospace;background:#ffffff30;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{background:radial-gradient(ellipse at 80% 20%,#35407e 0,transparent 55%),linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding-bottom:110px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:50px 0 0}
+.brand{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;line-height:1.25;margin-bottom:38px}
+.brand i{width:38px;height:38px;border-radius:10px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:20px}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff2e;background:#ffffff12;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.pill svg{color:var(--gold)}
+.hero h1{font:800 clamp(40px,5.2vw,64px)/1.03 var(--display);letter-spacing:-.04em;margin:22px 0 20px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:#c9d3e3;font-size:17px;max-width:600px;margin:0}
+.hero p b{color:#fff}
+.price{display:flex;align-items:center;gap:14px;margin:28px 0 22px;flex-wrap:wrap}
+.price del{color:#9fb0c8;font-size:18px}
+.price strong{font:800 clamp(40px,5vw,54px)/1 var(--display);color:var(--gold)}
+.price .tagred{background:var(--red);color:#fff;padding:5px 10px;border-radius:7px;font-size:11px;font-weight:800;text-transform:uppercase}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;background:var(--gold);color:var(--navy);padding:17px 30px;border-radius:14px;font-weight:800;text-transform:uppercase;font-size:16px;border-bottom:4px solid var(--gold2);box-shadow:0 10px 26px #ffc62e40;transition:.2s}
+.cta:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.checks{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 0;padding:0;list-style:none;color:#b9c6da;font-size:13px;font-weight:600}
+.checks li{display:flex;align-items:center;gap:7px}
+.checks svg{color:var(--gold);font-size:15px}
+
+.mock{position:relative;min-height:470px}
+.mock .m{position:absolute;background:#fff;border-radius:12px;box-shadow:0 22px 44px #0007;border:6px solid #fff;overflow:hidden}
+.mock .m1{left:2%;top:0;width:50%;aspect-ratio:.74;transform:rotate(-5deg)}
+.mock .m2{right:6%;top:42px;width:46%;aspect-ratio:.74;transform:rotate(5deg)}
+.mock .m3{left:9%;top:222px;width:52%;border-radius:16px;transform:rotate(-3deg);padding:10px;border:0}
+.mock .m4{right:0;top:262px;width:40%;border-radius:16px;transform:rotate(4deg);padding:10px;border:0}
+.mock .lbl{font-size:11px;font-weight:800;color:var(--purple);text-transform:uppercase;letter-spacing:.04em;text-align:center;margin-bottom:6px}
+.mock .m3 .ph,.mock .m4 .ph{aspect-ratio:1.15;border-radius:8px;background:#fff}
+.mock .m3 .ph img,.mock .m4 .ph img{object-fit:contain}
+.badge{position:absolute;right:0;top:-6px;width:96px;height:96px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-content:center;text-align:center;font-size:12px;font-weight:800;line-height:1.2;transform:rotate(9deg);box-shadow:0 10px 24px #0004;z-index:3}
+.badge b{font:800 28px var(--display)}
+
+/* stats */
+.stats{position:relative;margin-top:-52px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;z-index:2}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 12px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font:800 32px/1.2 var(--display);color:var(--purple)}
+.stat span{font-size:12px;color:var(--muted);font-weight:600}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.family{position:relative}
+.family .ph{aspect-ratio:1.33;border-radius:24px;box-shadow:var(--shadow)}
+.family .note{position:absolute;left:18px;bottom:-22px;background:#fff;padding:12px 18px;border-radius:14px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:12px;line-height:1.3}
+.family .note svg{font-size:22px;color:var(--purple)}
+.family .note b{display:block;font-size:13px}
+.family .note span{color:var(--muted)}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.icon{width:42px;height:42px;border-radius:12px;background:var(--lav);color:var(--purple);display:grid;place-items:center;font-size:19px}
+.feature h3{font-size:14px;margin:10px 0 4px}
+.feature p{font-size:13px;color:var(--muted);margin:0}
+
+/* combo */
+.combo{background:var(--lav)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:940px;margin:auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 30px #3722530d}
+.bookrow{display:flex;gap:18px;align-items:flex-start}
+.cover{width:88px;min-width:88px;aspect-ratio:.72;border-radius:8px;box-shadow:0 8px 16px #25203430}
+.tag{display:inline-block;background:var(--lav);color:var(--purple);border-radius:99px;padding:5px 10px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+.tag.green{background:#d8f3e4;color:var(--green)}
+.card h3{font:800 22px var(--display);margin:10px 0 2px}
+.card p{font-size:13px;color:var(--muted);margin:0}
+.chapters{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:0;margin:26px 0 0;list-style:none;font-size:12px}
+.chapters li{display:flex;gap:8px;align-items:center}
+.chapters b{background:#f1edf5;color:#6b6578;border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:11px;flex:none}
+.wide{grid-column:span 2;display:grid;grid-template-columns:.95fr 1.05fr;padding:0;overflow:hidden}
+.preview{background:#f4efe1;padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.preview .ph{width:100%;aspect-ratio:1.1;background:#fff;border:5px solid #fff;border-radius:12px;box-shadow:0 18px 30px #0003;transform:rotate(-3deg)}
+.preview .ph img,.natal .pv .ph img{object-fit:contain}
+.preview small{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#6b6f77}
+.widecopy{padding:32px;display:flex;flex-direction:column;justify-content:center}
+.widecopy h3{font-size:28px}
+.ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px;font-size:12px}
+.ticks li{display:flex;gap:10px;align-items:center}
+.ticks svg{width:22px;height:22px;padding:5px;border-radius:50%;background:var(--lav);color:var(--purple);stroke-width:3}
+.ticks.g svg{background:#d8f3e4;color:var(--green)}
+
+/* value */
+.valuebox{max-width:620px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.list{margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:center;gap:12px;padding:14px 26px;border-bottom:1px solid var(--line);font-size:13px}
+.list li svg{width:22px;height:22px;padding:5px;border-radius:50%;background:#d8f3e4;color:var(--green);stroke-width:3}
+.list li span{flex:1}
+.list li strong{font-size:12px;color:var(--muted)}
+.buyarea{background:var(--beige);text-align:center;padding:28px 26px 30px}
+.buyarea .total{font-size:12px;color:var(--muted)}
+.buyarea .today{display:block;color:var(--red);font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.buyarea .big{font:800 56px/1.1 var(--display)}
+.buyarea .small{font-size:12px;color:var(--muted);margin:0 0 18px}
+.buyarea .checks{justify-content:center;color:var(--muted)}
+.buyarea .checks svg{color:var(--green)}
+.buyarea .upsell{margin:18px 0 0;font-size:12px;color:var(--muted)}
+.buyarea .upsell a{color:var(--purple);font-weight:700}
+
+/* natal */
+.natal-sec{padding:0 0 84px}
+.natal{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:30px;display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center;padding:42px;max-width:820px;margin:auto;box-shadow:var(--shadow)}
+.natal .pv{display:flex;flex-direction:column;align-items:center;gap:10px}
+.natal .pv .ph{width:100%;aspect-ratio:.78;border:6px solid #fff;border-radius:12px;background:#fff;transform:rotate(-3deg);box-shadow:0 18px 30px #0005}
+.natal .pv small{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#a9bad2}
+.natal .tag{background:var(--gold);color:var(--navy)}
+.natal h2{font:800 clamp(28px,3.4vw,38px)/1.1 var(--display);margin:14px 0 12px}
+.natal h2 em{font-style:normal;color:var(--gold)}
+.natal p{color:#c9d3e3;font-size:14px;margin:0}
+.natal p b{color:#fff}
+.natal .ticks{grid-template-columns:1fr 1fr;gap:12px 16px;color:#e4ebf5}
+.natal .ticks svg{background:#ffffff1f;color:var(--gold)}
+.natal .row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;flex-wrap:wrap}
+.natal .row small{display:block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#a9bad2}
+.natal .row strong{font:800 30px var(--display);color:var(--gold)}
+.natal .cta{padding:14px 22px;font-size:14px}
+.natal .fine{font-size:11px;margin-top:12px}
+
+/* steps */
+.steps-sec{background:var(--mint)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:940px;margin:auto}
+.step{background:#fff;border-radius:22px;padding:22px;box-shadow:0 10px 26px #12875c14}
+.step .top{display:flex;justify-content:space-between;align-items:center}
+.step .ico{width:40px;height:40px;border-radius:50%;background:#d1f0df;color:var(--green);display:grid;place-items:center;font-size:19px}
+.step .time{display:inline-flex;gap:6px;align-items:center;background:var(--beige);border-radius:99px;padding:4px 10px;font-size:11px;font-weight:700}
+.step b.n{display:block;margin:18px 0 2px;font-size:10px;letter-spacing:.14em;color:var(--muted)}
+.step h3{font:800 20px var(--display);margin:0 0 6px}
+.step p{font-size:12px;color:var(--muted);margin:0}
+
+/* guarantee */
+.guarantee{padding:70px 0}
+.gbox{max-width:720px;margin:auto;background:#fff;border:1.5px dashed #8fd0b0;border-radius:24px;padding:30px;display:flex;gap:28px;align-items:center}
+.seal{width:112px;height:112px;min-width:112px;border-radius:50%;background:#d8f5e3;border:6px solid #eaf9f0;display:grid;place-content:center;justify-items:center;color:var(--green);font:800 18px var(--display)}
+.seal svg{font-size:30px;margin-bottom:2px}
+.gbox h2{font:800 26px var(--display);margin:0 0 6px}
+.gbox p{margin:0;color:var(--muted);font-size:14px}
+
+/* faq */
+.faq-sec{background:var(--beige)}
+.faq{max-width:640px;margin:auto;display:grid;gap:10px}
+.faq details{background:#fff;border-radius:16px;box-shadow:0 6px 16px #3a2c1410;padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 0;font-weight:700;font-size:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{transition:.2s;color:var(--muted)}
+.faq details[open] summary svg{transform:rotate(180deg)}
+.faq details p{color:var(--muted);font-size:14px;margin:0 0 16px}
+
+/* final */
+.final-sec{padding:84px 0 40px}
+.final{max-width:720px;margin:auto;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center;border-radius:30px;padding:46px 28px;box-shadow:var(--shadow)}
+.final .redpill{display:inline-flex;gap:6px;align-items:center;background:var(--red);padding:6px 14px;border-radius:99px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.final h2{font:800 clamp(28px,4vw,40px)/1.1 var(--display);margin:18px auto 10px;max-width:560px}
+.final h2 em{font-style:normal;color:var(--gold)}
+.final p{color:#c9d3e3;font-size:14px;margin:0}
+.clock{display:flex;justify-content:center;align-items:center;gap:8px;margin:22px 0}
+.clock div{background:#ffffff1c;border-radius:12px;padding:8px 0;width:66px}
+.clock b{display:block;font:800 24px/1.2 ui-monospace,Menlo,Consolas,monospace}
+.clock small{font-size:9px;font-weight:800;letter-spacing:.1em;color:#a9bad2}
+.clock i{font-style:normal;color:var(--gold);font-weight:800;font-size:20px}
+.final .price{justify-content:center;margin:10px 0 2px}
+.final .checks{justify-content:center}
+.stars{display:flex;justify-content:center;align-items:center;gap:4px;margin-top:20px;color:var(--gold);font-size:12px}
+.stars svg{fill:var(--gold);stroke:none;font-size:15px}
+.stars span{color:#b9c6da;margin-left:8px;display:flex;align-items:center;gap:5px}
+.stars span svg{fill:none;stroke:currentColor;stroke-width:2}
+
+.foot{padding:30px 0 110px;text-align:center;color:var(--muted);font-size:12px}
+.stickybuy{display:none}
+
+@media(max-width:820px){
+ section{padding:62px 0}
+ .hero-grid,.intro{grid-template-columns:1fr;gap:34px}
+ .hero-grid{padding-top:34px}
+ .mock{min-height:430px;max-width:460px;margin:auto;width:100%}
+ .stats{grid-template-columns:1fr 1fr}
+ .cards{grid-template-columns:1fr}
+ .wide{grid-column:auto;grid-template-columns:1fr}
+ .natal{grid-template-columns:1fr;padding:30px 22px}
+ .natal .pv{max-width:240px;margin:auto}
+ .steps{grid-template-columns:1fr}
+ .gbox{flex-direction:column;text-align:center}
+ .features{grid-template-columns:1fr}
+ .family .note{position:static;margin-top:14px;display:inline-flex}
+ .stickybuy{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;padding:10px 14px;box-shadow:0 -6px 24px #1b142626;justify-content:space-between;align-items:center}
+ .stickybuy strong{display:block;color:var(--purple);font-size:20px;line-height:1.1}
+ .stickybuy small{font-size:10px;color:var(--muted)}
+ .stickybuy .cta{padding:12px 16px;font-size:12px;box-shadow:none}
+}
+/* ajustes da nova versão */
+[hidden]{display:none!important}
+.hero .micro{display:block;margin:-10px 0 20px;color:#b9c6da;font-size:12px;font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1000px;margin:auto}
+.gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 10px 26px #3722530d}
+.gallery .ph{aspect-ratio:1;border-radius:10px;background:#fff}
+.gallery .ph img{object-fit:contain}
+.gallery figcaption{font-size:13px;font-weight:700;text-align:center;margin-top:8px;line-height:1.3}
+.gallery figcaption span{display:block;color:var(--muted);font-weight:500;font-size:11px;margin-top:2px}
+.specs{max-width:760px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.spec{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:13px;color:var(--muted)}
+.spec b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);margin-bottom:3px}
+.final .fine2{margin-top:20px;font-size:12px;color:#b9c6da}
+.natal .plus{position:relative;margin-top:34px;padding:28px 20px 20px;border:2px solid var(--gold);background:linear-gradient(135deg,#ffffff1f,#ffffff0d);border-radius:20px;display:flex;flex-direction:column;gap:16px;box-shadow:0 0 0 4px #ffc62e24,0 16px 32px #0005}
+.plus-badge{position:absolute;top:-13px;left:18px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:6px 13px;border-radius:99px;box-shadow:0 6px 14px #0004}
+.plus-body{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.plus-title{display:block;font:800 22px/1.1 var(--display);color:#fff;margin-bottom:4px}
+.plus-info span{font-size:13px;color:#c9d3e3}
+.plus-price{text-align:right}
+.plus-price del{display:block;font-size:14px;color:#9fb0c8}
+.plus-price strong{display:block;font:800 38px/1 var(--display);color:var(--gold);white-space:nowrap}
+.natal .plus .cta{background:var(--red);color:#fff;border-bottom:4px solid #a8221c;box-shadow:0 10px 24px #e23a3266;width:100%;padding:17px 22px;font-size:16px;animation:pulsa 2.2s ease-in-out infinite}
+.natal .plus .cta:hover{filter:brightness(1.08)}
+@keyframes pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@media(prefers-reduced-motion:reduce){.natal .plus .cta{animation:none}}
+@media(max-width:820px){.gallery{grid-template-columns:1fr 1fr}.specs{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.4 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><path d="M7 13h.01M17 13h.01"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2s0-2 1.5-2h2a4 4 0 0 0 4-4c0-5-4.5-10-9-10z"/><path d="M7.5 11h.01M10 7.5h.01M14.5 7.5h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2.2.7 3.5 2.6 3.5 6"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="m12 2 2.4 1.8 3-.2 1 2.8 2.5 1.7-.9 2.9.9 2.9-2.5 1.7-1 2.8-3-.2L12 22l-2.4-1.8-3 .2-1-2.8-2.5-1.7.9-2.9-.9-2.9 2.5-1.7 1-2.8 3 .2z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4 7l16 10M4 17 20 7"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.5 7L12 17.7 5.7 21.2l1.5-7L2 9.4l7-.8z"/></symbol>
+  <symbol id="i-inf" viewBox="0 0 24 24"><path d="M6 8c-2.5 0-4 1.8-4 4s1.5 4 4 4c4 0 8-8 12-8 2.5 0 4 1.8 4 4s-1.5 4-4 4c-4 0-8-8-12-8z"/></symbol>
+ </defs>
+</svg>
+
+<div class="offer"><svg><use href="#i-flame"/></svg> <span id="offertext">Preço especial do combo: R$ 19,90 em vez de R$ 47,00</span> <b id="timer" hidden></b></div>
+
+<header class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="brand"><i><svg><use href="#i-spark"/></svg></i><span>Combo Criativo<br>para Colorir</span></div>
+   <span class="pill"><svg><use href="#i-bolt"/></svg> Receba no seu e-mail em menos de 2 minutos</span>
+   <h1>Menos telas, <em>mais criatividade!</em></h1>
+   <p>Um combo especial com <b>4 livros de colorir</b> para transformar o tempo livre das crianças em momentos de diversão, criatividade e conversa em família: <b>Noé</b>, <b>Ester</b>, <b>Daniel</b> e <b>Carros</b>, em PDF para imprimir em casa.</p>
+   <div class="price"><del>R$ 47,00</del><strong>R$ 19,90</strong><span class="tagred">Preço do combo</span></div>
+   <span class="micro">Acesso digital · imprima quantas vezes quiser (uso pessoal) · Pix ou cartão</span>
+   <a class="cta buy" href="#comprar">Quero o combo agora <svg><use href="#i-arrow"/></svg></a>
+   <ul class="checks">
+    <li><svg><use href="#i-lock"/></svg>Pagamento seguro</li>
+    <li><svg><use href="#i-bolt"/></svg>Acesso imediato</li>
+    <li><svg><use href="#i-shield"/></svg>Garantia de 7 dias</li>
+   </ul>
+  </div>
+  <div class="mock" aria-hidden="true">
+   <div class="m m1 ph" data-emoji="🛶"><img src="images/capa-noe.png" alt="" onerror="this.parentNode.classList.add('noimg')"></div>
+   <div class="m m2 ph" data-emoji="👑"><img src="images/capa-ester.png" alt="" onerror="this.parentNode.classList.add('noimg')"></div>
+   <div class="m m3"><div class="lbl">+ Carros para colorir</div><div class="ph" data-emoji="🚗"><img src="images/previa-carros.png" alt="" onerror="this.parentNode.classList.add('noimg')"></div></div>
+   <div class="m m4"><div class="lbl">+ Daniel na Cova dos Leões</div><div class="ph" data-emoji="🦁"><img src="images/previa-daniel.png" alt="" onerror="this.parentNode.classList.add('noimg')"></div></div>
+   <div class="badge">4 livros<br><b>-58%</b></div>
+  </div>
+ </div>
+</header>
+
+<div class="wrap stats">
+ <div class="stat"><b>4</b><span>livros digitais</span></div>
+ <div class="stat"><b>A4</b><span>pronto para imprimir</span></div>
+ <div class="stat"><b>∞</b><span>impressões</span></div>
+ <div class="stat"><b>2 min</b><span>para receber no e-mail</span></div>
+</div>
+
+<section>
+ <div class="wrap intro">
+  <div class="family">
+   <div class="ph" data-emoji="👨‍👩‍👧‍👦"><img src="images/familia.jpg" alt="Criança colorindo a arca de Noé" onerror="this.parentNode.classList.add('noimg')"></div>
+   <div class="note"><svg><use href="#i-print"/></svg><div><b>Imprima quantas vezes quiser</b><span>Uso pessoal ilimitado</span></div></div>
+  </div>
+  <div>
+   <span class="eyebrow">Por que famílias amam</span>
+   <h2 class="heading">Mais do que colorir: criar memórias em família</h2>
+   <div class="features">
+    <div class="feature"><span class="icon"><svg><use href="#i-heart"/></svg></span><h3>Fé que a criança entende</h3><p>Histórias bíblicas para ler em família, no ministério infantil ou na EBD.</p></div>
+    <div class="feature"><span class="icon"><svg><use href="#i-car"/></svg></span><h3>Diversão para quem ama carros</h3><p>Desenhos com detalhes para pintar, imaginar e criar no próprio ritmo.</p></div>
+    <div class="feature"><span class="icon"><svg><use href="#i-palette"/></svg></span><h3>Longe das telas</h3><p>Horas de concentração e criatividade com lápis de cor ou giz.</p></div>
+    <div class="feature"><span class="icon"><svg><use href="#i-users"/></svg></span><h3>Momento em família</h3><p>Escolham um desenho, preparem os lápis e pintem lado a lado.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="combo" id="combo">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">O que vem no combo</span><h2 class="heading">Quatro livros digitais, prontos para imprimir</h2><p>Três histórias bíblicas para ler e colorir, mais um livro de carros para soltar a imaginação.</p></div>
+  <div class="cards">
+   <article class="card">
+    <div class="bookrow">
+     <div class="cover ph" data-emoji="🛶"><img src="images/capa-noe.png" alt="Capa Noé e a Grande Arca" onerror="this.parentNode.classList.add('noimg')"></div>
+     <div><span class="tag">12 páginas · 8 cenas para colorir</span><h3>Noé e a Grande Arca</h3><p>Baseado em Gênesis 6–9</p></div>
+    </div>
+    <ol class="chapters">
+     <li><b>1</b>Noé ouve a orientação de Deus</li><li><b>2</b>A família constrói a arca</li>
+     <li><b>3</b>Os animais chegam em pares</li><li><b>4</b>Todos encontram abrigo</li>
+     <li><b>5</b>A chuva passa e a pomba voa</li><li><b>6</b>A pomba volta com uma folha</li>
+     <li><b>7</b>A família sai da arca</li><li><b>8</b>O arco-íris lembra a promessa</li>
+    </ol>
+   </article>
+   <article class="card">
+    <div class="bookrow">
+     <div class="cover ph" data-emoji="👑"><img src="images/capa-ester.png" alt="Capa Ester, a Rainha Corajosa" onerror="this.parentNode.classList.add('noimg')"></div>
+     <div><span class="tag">10 páginas · 6 cenas para colorir</span><h3>Ester, a Rainha Corajosa</h3><p>Baseado no livro de Ester</p></div>
+    </div>
+    <ol class="chapters">
+     <li><b>1</b>Ester é escolhida como rainha</li><li><b>2</b>Ela ouve um plano perigoso</li>
+     <li><b>3</b>Ester se torna rainha</li><li><b>4</b>Mardoqueu envia uma notícia</li>
+     <li><b>5</b>Ester encontra coragem para falar</li><li><b>6</b>O povo recebe boas notícias</li>
+    </ol>
+   </article>
+   <article class="card wide">
+    <div class="preview"><div class="ph" data-emoji="🦁"><img src="images/previa-daniel.png" alt="Prévia Daniel na Cova dos Leões" onerror="this.parentNode.classList.add('noimg')"></div><small>Prévia de uma página do livro</small></div>
+    <div class="widecopy">
+     <span class="tag" style="align-self:flex-start">Novo no combo · livro digital em PDF</span>
+     <h3>Daniel na Cova dos Leões</h3>
+     <p>A história de coragem de Daniel, que orou sem medo e passou a noite na cova dos leões. Desenhos com detalhes para imprimir, pintar e conversar sobre fé com a criança.</p>
+     <ul class="ticks"><li><svg><use href="#i-check"/></svg>Arquivo digital para baixar e imprimir</li><li><svg><use href="#i-check"/></svg>Uma história bíblica para ler antes de pintar</li><li><svg><use href="#i-check"/></svg>Impressão ilimitada para uso pessoal</li></ul>
+    </div>
+   </article>
+   <article class="card wide">
+    <div class="preview"><div class="ph" data-emoji="🚗"><img src="images/previa-carros.png" alt="Prévia Carros para Colorir" onerror="this.parentNode.classList.add('noimg')"></div><small>Prévia de uma página do livro</small></div>
+    <div class="widecopy">
+     <span class="tag green" style="align-self:flex-start">Livro digital em PDF</span>
+     <h3>Carros para Colorir</h3>
+     <p>Um livro dedicado a quem gosta de carros, com desenhos cheios de detalhes para imprimir, pintar e se divertir no próprio ritmo.</p>
+     <ul class="ticks g"><li><svg><use href="#i-check"/></svg>Arquivo digital para baixar e imprimir</li><li><svg><use href="#i-check"/></svg>Uma atividade criativa longe das telas</li><li><svg><use href="#i-check"/></svg>Impressão ilimitada para uso pessoal</li></ul>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="previas">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">Veja por dentro</span><h2 class="heading">Páginas reais dos livros que você recebe</h2><p>As imagens abaixo são do próprio material, para você conhecer o estilo dos desenhos antes de comprar.</p></div>
+  <div class="gallery">
+   <figure><div class="ph"><img src="images/capa-noe.png" alt="Página do livro Noé e a Grande Arca" loading="lazy"></div><figcaption>Noé e a Grande Arca<span>12 páginas · 8 cenas</span></figcaption></figure>
+   <figure><div class="ph"><img src="images/capa-ester.png" alt="Página do livro Ester, a Rainha Corajosa" loading="lazy"></div><figcaption>Ester, a Rainha Corajosa<span>10 páginas · 6 cenas</span></figcaption></figure>
+   <figure><div class="ph"><img src="images/previa-daniel.png" alt="Página do livro Daniel na Cova dos Leões" loading="lazy"></div><figcaption>Daniel na Cova dos Leões<span>PDF para imprimir</span></figcaption></figure>
+   <figure><div class="ph"><img src="images/previa-carros.png" alt="Página do livro Carros para Colorir" loading="lazy"></div><figcaption>Carros para Colorir<span>PDF para imprimir</span></figcaption></figure>
+  </div>
+  <div class="specs">
+   <div class="spec"><b>Formato</b>4 livros digitais em PDF, prontos para imprimir em papel A4</div>
+   <div class="spec"><b>Noé e Ester</b>Noé: 12 páginas e 8 cenas. Ester: 10 páginas e 6 cenas</div>
+   <div class="spec"><b>Daniel e Carros</b>Desenhos detalhados para imprimir, pintar e se divertir no próprio ritmo</div>
+   <div class="spec"><b>Impressão</b>Imprima quantas vezes quiser, para uso pessoal</div>
+   <div class="spec"><b>Entrega</b>Por e-mail, normalmente em até 2 minutos após a confirmação do pagamento</div>
+   <div class="spec"><b>Como usar</b>Baixe, imprima em A4 e escolha o desenho com a criança</div>
+   <div class="spec"><b>Para quem</b>Atividade para fazer em família. A idade ideal depende da criança e do nível de detalhe de cada desenho</div>
+   <div class="spec"><b>Garantia</b>Reembolso de 100% em até 7 dias</div>
+  </div>
+ </div>
+</section>
+
+<section id="comprar">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">Tudo o que você recebe</span><h2 class="heading">Quatro livros em um combo completo por menos de um lanche</h2><p>O novo Daniel na Cova dos Leões já entra no combo pelo mesmo preço promocional.</p></div>
+  <div class="valuebox">
+   <ul class="list">
+    <li><svg><use href="#i-check"/></svg><span>Livro 1 — Noé e a Grande Arca (PDF)</span><strong>R$ 24,90</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Livro 2 — Ester, a Rainha Corajosa (PDF)</span><strong>R$ 24,90</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Livro 3 — Daniel na Cova dos Leões (PDF)</span><strong>Incluso</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Livro 4 — Carros para Colorir (PDF)</span><strong>Incluso</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Introdução para ler junto em cada livro bíblico</span><strong>Incluso</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Atividade para relembrar cada história</span><strong>Incluso</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Certificado de conclusão para cada livro</span><strong>Incluso</strong></li>
+    <li><svg><use href="#i-check"/></svg><span>Impressão ilimitada para uso pessoal</span><strong>Incluso</strong></li>
+   </ul>
+   <div class="buyarea">
+    <div class="total">Valor total: <del>R$ 47,00</del></div>
+    <span class="today">Hoje, por apenas</span>
+    <div class="big">R$ 19,90</div>
+    <p class="small">R$ 19,90 à vista · ou 3x de R$ 7,25 no cartão (total de R$ 21,75, com o acréscimo do parcelamento)</p>
+    <a class="cta buy" href="#comprar">Quero o combo agora <svg><use href="#i-arrow"/></svg></a>
+    <ul class="checks"><li><svg><use href="#i-lock"/></svg>Pagamento seguro</li><li><svg><use href="#i-bolt"/></svg>Acesso imediato</li><li><svg><use href="#i-shield"/></svg>Garantia de 7 dias</li></ul>
+    <p class="upsell">Quer levar também o <b>Natal para Colorir</b>? Separado custa <b>R$ 24,90</b>, ou leve o <b>combo + Natal por R$ 35,90</b> (economiza R$ 8,90) — <a href="#natal">veja aqui</a>.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="natal-sec" id="natal">
+ <div class="wrap">
+  <div class="natal">
+   <div class="pv"><div class="ph" data-emoji="🎅"><img src="images/previa-natal.png" alt="Prévia Natal para Colorir" onerror="this.parentNode.classList.add('noimg')"></div><small>Prévia de uma página do livro</small></div>
+   <div>
+    <span class="tag"><svg style="width:11px;height:11px;vertical-align:-1px;margin-right:4px"><use href="#i-snow"/></svg>Livro extra · vendido separadamente</span>
+    <h2>Leve o <em>Natal para Colorir</em> junto</h2>
+    <p>Uma coleção de desenhos de Natal para imprimir e pintar com a criança em dezembro: Papai Noel, presentes, brinquedos e muita alegria. Ele não entra no combo de R$ 19,90: leve só o livro por <b>R$ 24,90</b> ou aproveite o pacote completo logo abaixo.</p>
+    <ul class="ticks" style="margin-top:20px">
+     <li><svg><use href="#i-check"/></svg>PDF para baixar e imprimir em A4</li>
+     <li><svg><use href="#i-check"/></svg>Chega no mesmo e-mail, em minutos</li>
+     <li><svg><use href="#i-check"/></svg>Impressão ilimitada para uso pessoal</li>
+     <li><svg><use href="#i-check"/></svg>Garantia de 7 dias</li>
+    </ul>
+    <div class="row">
+     <a class="cta buy-natal" href="#comprar">Quero só o livro de Natal <svg><use href="#i-arrow"/></svg></a>
+     <div><small>Só este livro</small><strong>R$ 24,90</strong></div>
+    </div>
+    <div class="plus"><span class="plus-badge">⭐ Melhor oferta · economize R$ 8,90</span><div class="plus-body"><div class="plus-info"><b class="plus-title">Combo + Natal</b><span>Os 4 livros de colorir e o livro de Natal juntos</span></div><div class="plus-price"><del>R$ 44,80</del><strong>R$ 35,90</strong></div></div><a class="cta buy-plus" href="#comprar">Quero tudo junto <svg><use href="#i-arrow"/></svg></a></div>
+    <p class="fine">Compra opcional. O combo com 4 livros continua por R$ 19,90.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="steps-sec">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">Rápido de verdade</span><h2 class="heading">Do clique à primeira página colorida em minutos</h2><p>Sem frete, sem espera, sem aplicativo. Tudo digital e liberado na hora.</p></div>
+  <div class="steps">
+   <div class="step"><div class="top"><span class="ico"><svg><use href="#i-badge"/></svg></span><span class="time"><svg style="width:12px;height:12px"><use href="#i-clock"/></svg>30 segundos</span></div><b class="n">PASSO 1</b><h3>Finalize o pedido</h3><p>Pix aprovado na hora ou cartão de crédito, em ambiente seguro.</p></div>
+   <div class="step"><div class="top"><span class="ico"><svg><use href="#i-mail"/></svg></span><span class="time"><svg style="width:12px;height:12px"><use href="#i-clock"/></svg>Até 2 minutos</span></div><b class="n">PASSO 2</b><h3>Receba no e-mail</h3><p>O acesso aos PDFs chega automaticamente após a confirmação.</p></div>
+   <div class="step"><div class="top"><span class="ico"><svg><use href="#i-download"/></svg></span><span class="time"><svg style="width:12px;height:12px"><use href="#i-clock"/></svg>Na mesma hora</span></div><b class="n">PASSO 3</b><h3>Imprima e pinte</h3><p>Baixe, imprima em A4 e escolha a primeira história com a criança.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="guarantee">
+ <div class="wrap">
+  <div class="gbox">
+   <div class="seal"><svg><use href="#i-shield"/></svg>7 dias</div>
+   <div><h2>Risco zero para você</h2><p>Baixe, imprima e pinte com a criança. Se não gostar por qualquer motivo, peça o reembolso em até 7 dias e devolvemos 100% do valor. Simples assim.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="faq-sec">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">Dúvidas comuns</span><h2 class="heading">Antes de garantir o seu combo</h2></div>
+  <div class="faq">
+   <details><summary>Vou receber livros físicos?<svg><use href="#i-chev"/></svg></summary><p>Não. São produtos digitais em PDF enviados por e-mail, prontos para baixar e imprimir.</p></details>
+   <details><summary>Em quanto tempo recebo?<svg><use href="#i-chev"/></svg></summary><p>O acesso é enviado automaticamente após a confirmação do pagamento, normalmente em até 2 minutos.</p></details>
+   <details><summary>Preciso imprimir todos os livros?<svg><use href="#i-chev"/></svg></summary><p>Não. Você escolhe quais páginas imprimir e pode reimprimir para uso pessoal.</p></details>
+   <details><summary>Preciso de algum aplicativo?<svg><use href="#i-chev"/></svg></summary><p>Não. Basta abrir os PDFs num leitor compatível e imprimir em papel A4.</p></details>
+   <details><summary>Para qual idade é indicado?<svg><use href="#i-chev"/></svg></summary><p>São atividades infantis para fazer em família; a idade ideal depende da criança e do nível de detalhe de cada desenho.</p></details>
+   <details><summary>O livro de Natal está no combo?<svg><use href="#i-chev"/></svg></summary><p>Não no combo de R$ 19,90. O livro de Natal é opcional: você pode levar só ele por R$ 24,90 ou escolher o pacote combo + Natal por R$ 35,90, que sai R$ 8,90 mais barato que comprar os dois separados.</p></details>
+   <details><summary>E se eu não gostar?<svg><use href="#i-chev"/></svg></summary><p>Você pode pedir reembolso em até 7 dias, conforme a garantia apresentada na oferta.</p></details>
+   <details><summary>O pagamento é seguro?<svg><use href="#i-chev"/></svg></summary><p>O pagamento é processado pela Cakto, com Pix ou cartão. Você confere o valor final na tela de pagamento antes de confirmar.</p></details>
+   <details><summary>Como funciona o parcelamento?<svg><use href="#i-chev"/></svg></summary><p>À vista, o combo custa R$ 19,90. No cartão, você pode parcelar em 3x de R$ 7,25, com total de R$ 21,75, porque o parcelamento tem acréscimo. O valor final aparece sempre na tela de pagamento.</p></details>
+   <details><summary>Posso ver como são os livros antes de comprar?<svg><use href="#i-chev"/></svg></summary><p>Sim. As imagens desta página mostram páginas reais dos livros, para você conhecer o estilo dos desenhos antes de decidir.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="final-sec">
+ <div class="wrap">
+  <div class="final">
+   <span class="redpill"><svg style="width:12px;height:12px"><use href="#i-flame"/></svg>Preço especial do combo</span>
+   <h2>Abra os PDFs. Separe os lápis. <em>Comece hoje.</em></h2>
+   <p>Baixe os PDFs, imprima e deixe a criança escolher o primeiro desenho.</p>
+   <div class="clock" id="clockwrap" hidden><div><b id="hh">12</b><small>HORAS</small></div><i>:</i><div><b id="mm">00</b><small>MIN</small></div><i>:</i><div><b id="ss">00</b><small>SEG</small></div></div>
+   <div class="price"><del>R$ 47,00</del><strong>R$ 19,90</strong></div>
+   <p style="margin-bottom:22px">R$ 19,90 à vista · ou 3x de R$ 7,25 no cartão (total de R$ 21,75)</p>
+   <a class="cta buy" href="#comprar">Garantir meu combo agora <svg><use href="#i-arrow"/></svg></a>
+   <ul class="checks" style="margin-top:18px"><li><svg><use href="#i-lock"/></svg>Pagamento seguro</li><li><svg><use href="#i-bolt"/></svg>Acesso imediato</li><li><svg><use href="#i-shield"/></svg>Garantia de 7 dias</li></ul>
+   <p class="fine2">Acesso vitalício aos arquivos · Pagamento processado pela Cakto · Reembolso em até 7 dias</p>
+  </div>
+ </div>
+</section>
+
+<footer class="foot"><div class="wrap"><b>Combo Criativo para Colorir</b><br>Noé e a Grande Arca, Ester, a Rainha Corajosa, Daniel na Cova dos Leões e Carros para Colorir · produtos digitais em PDF.<br>Livro extra opcional: Natal para Colorir, por R$ 24,90 separado ou R$ 35,90 junto com o combo.<br>Pagamento processado com segurança pela Cakto.</div></footer>
+
+<div class="stickybuy"><div><small>Combo completo</small><strong>R$ 19,90</strong></div><a class="cta buy" href="#comprar">Quero agora →</a></div>
+
+<script>
+/* ===== CONFIGURAÇÃO — preencha antes de publicar ===== */
+// Links de checkout da Cakto (um para cada oferta):
+const CHECKOUT_COMBO='https://pay.cakto.com.br/d2dwztr_1319055';                    // combo com 4 livros (R$ 19,90)
+const CHECKOUT_NATAL='https://pay.cakto.com.br/46bnr4k_1319223';               // só o livro de Natal (R$ 24,90)
+const CHECKOUT_COMBO_NATAL='https://pay.cakto.com.br/3f29ukj_1319418';   // combo + Natal (R$ 35,90)
+// Prazo REAL da promoção (opcional). Deixe vazio para não mostrar cronômetro.
+// Exemplo: '2026-11-30T23:59:59-03:00'
+const OFERTA_ATE='';
+/* ===================================================== */
+document.querySelectorAll('.buy').forEach(a=>a.href=CHECKOUT_COMBO);
+document.querySelectorAll('.buy-natal').forEach(a=>a.href=CHECKOUT_NATAL);
+document.querySelectorAll('.buy-plus').forEach(a=>a.href=CHECKOUT_COMBO_NATAL);
+
+// Cronômetro só aparece se houver um prazo real em OFERTA_ATE e ele ainda não passou.
+(function(){
+ const end=OFERTA_ATE?Date.parse(OFERTA_ATE):NaN;
+ if(isNaN(end))return;
+ const timer=document.getElementById('timer'),txt=document.getElementById('offertext'),box=document.getElementById('clockwrap');
+ const hh=document.getElementById('hh'),mm=document.getElementById('mm'),ss=document.getElementById('ss');
+ const pad=n=>String(n).padStart(2,'0');
+ let id;
+ function tick(){
+  const left=Math.floor((end-Date.now())/1000);
+  if(left<=0){timer.hidden=true;box.hidden=true;txt.textContent='Preço especial do combo: R$ 19,90';clearInterval(id);return;}
+  const h=Math.floor(left/3600),m=Math.floor(left%3600/60),s=left%60;
+  txt.textContent='Preço especial termina em';
+  timer.hidden=false;box.hidden=false;
+  timer.textContent=pad(h)+':'+pad(m)+':'+pad(s);
+  hh.textContent=pad(h);mm.textContent=pad(m);ss.textContent=pad(s);
+ }
+ tick();id=setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
